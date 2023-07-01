@@ -34,7 +34,7 @@ jobs:
           ref: 'lametric_sky'
           path: 'ha-core'
       - name: Copy Custom Component Manifest
-        run: cp ha-core/homeassistant/components/lametric/manifest.json ha-core/homeassistant/components/lametric
+        run: cp hacs/custom_components/lametric/manifest.json ha-core/homeassistant/components/lametric
       - name: Pack Release
         uses: thedoctor0/zip-release@0.7.1
         with:
