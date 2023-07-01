@@ -51,9 +51,9 @@ jobs:
           type: 'zip'
           filename: 'release.zip'
           exclusions: '*.git*'
-          path: 'hacs'
+          directory: 'hacs/custom_components/lametric'
       - uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          artifacts: "release.zip"
+          artifacts: "hacs/custom_components/lametric/release.zip"
           bodyFile: "hacs/info.md"
