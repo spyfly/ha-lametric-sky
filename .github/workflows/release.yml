@@ -51,7 +51,7 @@ jobs:
           type: 'zip'
           filename: 'release.zip'
           exclusions: '*.git*'
-          directory: 'hacs'
+          path: 'hacs'
       - uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
