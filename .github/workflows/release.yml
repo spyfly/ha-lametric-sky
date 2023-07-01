@@ -36,7 +36,7 @@ jobs:
 
       # Copy lametric integration folder
       - name: Copy lametric integration folder
-        run: cp -R ha-core/homeassistant/components/lametric hacs/custom_components/lametric
+        run: cp -R ha-core/homeassistant/components/lametric hacs/custom_components
         
       - name: Replace Manifest Version
         uses: jacobtomlinson/gha-find-replace@v3
