@@ -33,27 +33,17 @@ jobs:
           repository: 'spyfly/ha-core'
           ref: 'lametric_sky'
           path: 'ha-core'
-
-      # Copy lametric integration folder
-      - name: Copy lametric integration folder
-        run: cp -R ha-core/homeassistant/components/lametric hacs/custom_components
-        
-      - name: Replace Manifest Version
-        uses: jacobtomlinson/gha-find-replace@v3
-        with:
-          find: "demetriek==0.4.0"
-          replace: "demetriek @ git+https://github.com/spyfly/python-demetriek@lametric_sky"
-          include: "hacs/custom_components/lametric/manifest.json"
-          regex: false
-      - name: Archive Release
+      - name: Copy Custom Component Manifest
+        run: cp ha-core/homeassistant/components/lametric/manifest.json ha-core/homeassistant/components/lametric
+      - name: Pack Release
         uses: thedoctor0/zip-release@0.7.1
         with:
           type: 'zip'
           filename: 'release.zip'
           exclusions: '*.git*'
-          directory: 'hacs/custom_components/lametric'
+          directory: 'ha-core/homeassistant/components/lametric'
       - uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          artifacts: "hacs/custom_components/lametric/release.zip"
+          artifacts: "ha-core/homeassistant/components/lametric/release.zip"
           bodyFile: "hacs/info.md"
