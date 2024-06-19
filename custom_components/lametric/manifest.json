@@ -15,11 +15,11 @@
   "issue_tracker": "https://github.com/spyfly/ha-lametric-sky/issues",
   "loggers": ["demetriek"],
   "quality_scale": "platinum",
-  "requirements": ["git+https://github.com/spyfly/python-demetriek@lametric_sky#demetriek==0.4.1"],
+  "requirements": ["git+https://github.com/lm-db/python-demetriek#demetriek==0.4.1"],
   "ssdp": [
     {
       "deviceType": "urn:schemas-upnp-org:device:LaMetric:1"
     }
   ],
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
