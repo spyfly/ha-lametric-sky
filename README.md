@@ -1,5 +1,7 @@
 # Home Assistant LaMetric SKY Integration
 
+Note: This project is currently broken due to some changes in the LaMetric Firmware. This may be fixed when this issue here gets resolved: https://github.com/home-assistant/core/issues/110058
+
 This is an extended version of the LaMetric Integration for Home Assistant with support for SKY specific features, such as toggling the Display on and off
 
 ## Screenshots
